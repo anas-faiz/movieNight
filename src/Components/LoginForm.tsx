@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function SignInForm() {
-  const [userName, setUserName] = useState("");
+function LogInForm() {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,16 +17,8 @@ function SignInForm() {
         className="bg-white w-full max-w-md rounded-2xl shadow-xl p-8 flex flex-col"
       >
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Sign In
+          Log In
         </h2>
-
-        <input 
-          className="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
-          type="text"
-          placeholder="Username"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
 
         <input
           className="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -48,11 +40,11 @@ function SignInForm() {
           type="submit"
           className="bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition duration-300 shadow-md"
         >
-          Sign In
+          Log In
         </button>
 
         <p className="text-sm text-gray-600 text-center mt-6">
-          Already a user?{" "}
+          New Here?{" "}
          
         </p>
       </form>
@@ -60,4 +52,4 @@ function SignInForm() {
   );
 }
 
-export default SignInForm;
+export default LogInForm;
