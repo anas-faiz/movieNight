@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function SignInForm() {
   const [userName, setUserName] = useState("");
@@ -20,7 +21,7 @@ function SignInForm() {
           Sign In
         </h2>
 
-        <input 
+        <input
           className="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
           type="text"
           placeholder="Username"
@@ -53,7 +54,9 @@ function SignInForm() {
 
         <p className="text-sm text-gray-600 text-center mt-6">
           Already a user?{" "}
-         
+          <Link to="/login" className="text-green-600 font-medium hover:underline">
+            Login
+          </Link>
         </p>
       </form>
     </div>

@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function LogInForm() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { userName, email, password });
+    console.log("Form submitted:", { email, password });
   };
 
   return (
@@ -44,8 +44,13 @@ function LogInForm() {
         </button>
 
         <p className="text-sm text-gray-600 text-center mt-6">
-          New Here?{" "}
-         
+          New here?{" "}
+          <Link
+            to="/signin"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Sign Up
+          </Link>
         </p>
       </form>
     </div>
