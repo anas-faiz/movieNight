@@ -6,7 +6,7 @@ function Header(){
         <header className="relative z-10 w-full flex items-center justify-between px-10 py-6">
         <Link to="/">
         <img
-          className="h-12 md:h-16 object-contain drop-shadow-lg"
+          className="h-12 md:h-24 object-contain drop-shadow-lg"
           src={Logo}
           alt="Logo"
         />
