@@ -38,10 +38,7 @@ Includes GPT-powered recommendations for a next-level browsing experience.
 MOVIENIGHT-GPT/
 ├── src/
 │   ├── components/   # Reusable UI components
-│   ├── pages/        # Page-level components (SignIn, BrowsePage, GPTPage)
-│   ├── routes/       # App routing setup
 │   ├── App.tsx
 │   └── main.tsx
-├── public/           # Static assets
 ├── index.html
 └── package.json

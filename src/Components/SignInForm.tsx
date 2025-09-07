@@ -12,13 +12,13 @@ function SignInForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black">
+    <div className="flex items-center justify-center min-h-screen ">
       <form
         onSubmit={handleSubmit}
         className="bg-white w-full max-w-md rounded-2xl shadow-xl p-8 flex flex-col"
       >
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Sign In
+          Sign Up
         </h2>
 
         <input
@@ -49,7 +49,7 @@ function SignInForm() {
           type="submit"
           className="bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition duration-300 shadow-md"
         >
-          Sign In
+          Sign Up
         </button>
 
         <p className="text-sm text-gray-600 text-center mt-6">

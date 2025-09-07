@@ -11,7 +11,7 @@ function LogInForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black">
+    <div className="flex items-center justify-center min-h-screen">
       <form
         onSubmit={handleSubmit}
         className="bg-white w-full max-w-md rounded-2xl shadow-xl p-8 flex flex-col"
