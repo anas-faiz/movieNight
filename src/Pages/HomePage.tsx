@@ -24,7 +24,7 @@ function HomePage() {
           Stream unlimited movies and get AI-powered recommendations tailored
           just for you.
         </p>
-        <Link to="/signin">
+        <Link to="/auth">
           <button className="mt-8 bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
             Get Started
           </button>

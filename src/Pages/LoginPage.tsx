@@ -1,11 +1,15 @@
+import Header from "../Components/Header";
 import LogInForm from "../Components/LoginForm";
-import Logo from "../assets/Logo.png"
     const bg_image = import.meta.env.VITE_home_background_image;
 
     function LoginPage(){
     return(
-        <div className="w-full h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${bg_image})` }}>
+        <div
+      className="relative w-full h-screen bg-cover bg-center flex flex-col"
+      style={{ backgroundImage: `url(${bg_image})` }}
+    >   
+           <div className="absolute inset-0 bg-black/70"></div> 
+            <Header />
             <LogInForm/>
         </div>
 

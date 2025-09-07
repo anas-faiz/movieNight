@@ -11,7 +11,7 @@ function Header(){
           alt="Logo"
         />
         </Link>
-        <Link to="/login"><button className="bg-red-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
+        <Link to="/auth"><button className="bg-red-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
           Log In
         </button>
         </Link>
