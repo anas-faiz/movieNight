@@ -10,6 +10,7 @@ Includes GPT-powered recommendations for a next-level browsing experience.
 - 🎨 **Tailwind CSS** – Utility-first styling
 - 🌐 **React Router DOM** – Client-side routing
 - 🤖 **OpenAI API** – AI-powered movie suggestions
+- 🚇 **FireBase** - authentication and hosting
 
 ---
 

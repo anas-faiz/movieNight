@@ -12,7 +12,7 @@ function LogInForm() {
 
   const handleSubmit = () => {
     //console.log("Form submitted:", { email, password });
-    const message = validate(email, password, userName);
+    const message = validate(email, password, userName,logInPage);
     setErrorMessage(message);
   };
 
