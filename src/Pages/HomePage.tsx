@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
 import Header from "../Components/Header";
+import { useAuth } from "../utils/AuthContext";
 
 function HomePage() {
   const bg_image = import.meta.env.VITE_home_background_image;
+  const {setLogInPage} = useAuth();
+  
+  setLogInPage(false);
+
+  const handleClick = ()=>{
+    setLogInPage(false);
+  }
 
   return (
     <div
@@ -25,7 +33,7 @@ function HomePage() {
           just for you.
         </p>
         <Link to="/auth">
-          <button className="mt-8 bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
+          <button onClick={handleClick} className="mt-8 bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
             Get Started
           </button>
         </Link>

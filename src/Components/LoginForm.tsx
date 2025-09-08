@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { validate } from "../utils/validate.js";
+import { useAuth } from "../utils/AuthContext.js";
 
 function LogInForm() {
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
-  const [loginPage, setLoginPage] = useState(true);
+  
+  const {logInPage, setLogInPage} = useAuth();
 
   const handleSubmit = () => {
     //console.log("Form submitted:", { email, password });
@@ -15,7 +17,7 @@ function LogInForm() {
   };
 
   const handleLoginPage = () => {
-    setLoginPage(!loginPage);
+    setLogInPage(!logInPage);
   };
   
   return (
@@ -27,10 +29,10 @@ function LogInForm() {
           className="bg-black/80 w-full max-w-md rounded-2xl shadow-2xl p-8 flex flex-col backdrop-blur-sm"
         >
           <h2 className="text-3xl font-extrabold text-center text-white mb-6">
-            {loginPage ? "Log In" : "Sign Up"}
+            {logInPage ? "Log In" : "Sign Up"}
           </h2>
 
-          {!loginPage && (
+          {!logInPage && (
             <input
               className="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
               type="text"
@@ -60,18 +62,18 @@ function LogInForm() {
           <button
             onClick={handleSubmit}
             type="submit"
-            className="bg-red-600 mt-4 text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition duration-300 shadow-md"
+            className="bg-red-600 mt-4 text-white font-semibold py-2 rounded-lg cursor-pointer hover:bg-red-700 transition duration-300 shadow-md"
           >
-            {loginPage ? "Log In" : "Sign Up"}
+            {logInPage ? "Log In" : "Sign Up"}
           </button>
 
           <p className="text-sm text-gray-300 text-center mt-6">
-            {loginPage ? "New Here?" : "Already a User?"}
+            {logInPage ? "New Here?" : "Already a User?"}
             <span
               onClick={handleLoginPage}
               className="text-red-400 font-medium cursor-pointer hover:underline"
             >
-              {!loginPage ? "Log In" : "Sign Up"}
+              {!logInPage ? "Log In" : "Sign Up"}
             </span>
           </p>
         </form>
