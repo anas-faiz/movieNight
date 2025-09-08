@@ -6,7 +6,7 @@ function HomePage() {
   const bg_image = import.meta.env.VITE_home_background_image;
   const {setLogInPage} = useAuth();
   
-  setLogInPage(false);
+ // setLogInPage(false);
 
   const handleClick = ()=>{
     setLogInPage(false);

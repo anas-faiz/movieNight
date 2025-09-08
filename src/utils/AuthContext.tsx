@@ -1,9 +1,12 @@
 import { createContext, useContext, useState } from "react";
 
-const AuthContext = createContext();
+const AuthContext = createContext({
+    logInPage:true,
+    setLogInPage: ()=>{}
+});
 
 export function AuthProvider({ children }) {
-  const [logInPage, setLogInPage] = useState(true);
+  const [logInPage, setLogInPage] = useState(false);
   return (
     <AuthContext.Provider value={{ logInPage, setLogInPage }}>
       {children}

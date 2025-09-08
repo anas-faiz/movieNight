@@ -6,11 +6,14 @@ function Header() {
   const { logInPage, setLogInPage } = useAuth();
 
   const handleCLick = ()=>{
-    setLogInPage(!logInPage)
+    setLogInPage(true)
+  }
+  const resetContext = ()=>{
+    setLogInPage(false);
   }
   return (
     <header className="relative z-10 w-full flex items-center justify-between px-10 py-6">
-      <Link to="/">
+      <Link onClick={resetContext} to="/">
         <img
           className="h-12 md:h-24 object-contain drop-shadow-lg"
           src={Logo}
