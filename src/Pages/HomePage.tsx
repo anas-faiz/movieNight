@@ -33,7 +33,7 @@ function HomePage() {
           just for you.
         </p>
         <Link to="/auth">
-          <button onClick={handleClick} className="mt-8 bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
+          <button onClick={handleClick} className="mt-8 bg-red-600 text-white cursor-pointer px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300 ease-in-out">
             Get Started
           </button>
         </Link>
