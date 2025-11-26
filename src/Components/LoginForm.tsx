@@ -1,14 +1,15 @@
-import { useState } from "react";
-import { validate } from "../utils/validate.js";
-import { useAuth } from "../utils/AuthContext.js";
+import { useContext, useState } from "react";
+import { validate } from "../utils/validate";
+import { useAuth } from "../utils/AuthContext";
+import UserContext from '../utils/UserContext';
 
 function LogInForm() {
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
-  
   const {logInPage, setLogInPage} = useAuth();
+  const{user , userName, displayName} = useContext(UserContext)
 
   const handleSubmit = () => {
     //console.log("Form submitted:", { email, password });
