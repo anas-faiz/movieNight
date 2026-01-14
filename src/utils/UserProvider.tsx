@@ -1,9 +1,13 @@
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import UserContext from "./UserContext";
 
-const UserProvider = ({children})=>{
+type UserProviderProps= {
+    children :ReactNode
+}
+
+const UserProvider = ({children}: UserProviderProps)=>{
 const [user,setUser] = useState({
-    userName: "",
+    username: "",
     password: "",
     displayName:"",
 });

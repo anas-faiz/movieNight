@@ -9,7 +9,7 @@ function LogInForm() {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState();
   const {logInPage, setLogInPage} = useAuth();
-  const{user , userName, displayName} = useContext(UserContext)
+  const{user , username, displayName} = useContext(UserContext)
 
   const handleSubmit = () => {
     //console.log("Form submitted:", { email, password });
