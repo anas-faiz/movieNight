@@ -1,4 +1,4 @@
-import { useContext, useState, type FormEvent } from "react";
+import { useContext, useState} from "react";
 import { validate } from "../utils/validate";
 import { useAuth } from "../utils/AuthContext";
 import { UserContext } from "../utils/UserContext";
@@ -19,7 +19,7 @@ function LogInForm() {
 
   const { user, setUser } = userContext;
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const message = validate(email, password, userName, logInPage);
@@ -34,7 +34,7 @@ function LogInForm() {
   };
 
   const handleLoginPage = () => {
-    setLogInPage((prev: boolean) => !prev);
+    setLogInPage((prev) => !prev);
   };
 
   return (
