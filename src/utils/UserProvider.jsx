@@ -1,12 +1,9 @@
-import { useState, type ReactNode } from "react";
-import { UserContext, type UserType } from "./UserContext";
+import { useState } from "react";
+import { UserContext  } from "./UserContext";
 
-type UserProviderProps = {
-  children: ReactNode;
-};
 
-const UserProvider = ({ children }: UserProviderProps) => {
-  const [user, setUser] = useState<UserType>({
+const UserProvider = ({ children }) => {
+  const [user, setUser] = useState({
     username: "",
     password: "",
     displayName: "",

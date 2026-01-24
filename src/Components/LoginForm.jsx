@@ -4,10 +4,10 @@ import { useAuth } from "../utils/AuthContext";
 import { UserContext } from "../utils/UserContext";
 
 function LogInForm() {
-  const [email, setEmail] = useState<string>("");
-  const [userName, setUserName] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const { logInPage, setLogInPage } = useAuth();
 
