@@ -1,18 +1,8 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState } from "react";
 
-type AuthContextType = {
-  logInPage: boolean;
-  setLogInPage: React.Dispatch<React.SetStateAction<boolean>>;
-};
+const AuthContext = createContext(null);
 
-// Default value is `undefined` so we can catch missing provider errors
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-type AuthProviderProps = {
-  children: ReactNode;
-};
-
-export function AuthProvider({ children }: AuthProviderProps) {
+export function AuthProvider({ children }) {
   const [logInPage, setLogInPage] = useState(false);
 
   return (
@@ -24,8 +14,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
 export function useAuth() {
   const context = useContext(AuthContext);
+
   if (!context) {
     throw new Error("useAuth must be used within an AuthProvider");
   }
+
   return context;
 }
