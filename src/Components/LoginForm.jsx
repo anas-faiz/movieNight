@@ -1,4 +1,4 @@
-import { useContext, useState} from "react";
+import { useContext, useEffect, useState} from "react";
 import { validate } from "../utils/validate";
 import { useAuth } from "../utils/AuthContext";
 import { UserContext } from "../utils/UserContext";
@@ -36,6 +36,12 @@ function LogInForm() {
   const handleLoginPage = () => {
     setLogInPage((prev) => !prev);
   };
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setErrorMessage(null)
+    },2000)
+  },[errorMessage])
 
   return (
     <div>
